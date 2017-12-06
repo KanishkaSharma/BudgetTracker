@@ -1,0 +1,41 @@
+try{
+            conn=Connect.Connect();
+            
+            String sql="select * from "+usr;
+            pst=conn.prepareStatement(sql);
+            rs=pst.executeQuery();
+            System.out.println(rs.getString("ename"));
+           System.out.println( ((JTextField)jDateChooser2.getDateEditor().getUiComponent()).getText());
+            ArrayList<User> userList =new ArrayList<User>();
+            
+            while(rs.next())
+             {
+                    User user=new User(rs.getInt("limit"),rs.getString("ename"),rs.getInt("eamnt"),rs.getString("iname"),rs.getInt("iamnt"));
+                    userList.add(user);
+              }
+            DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
+        Object[] row =new Object[5];
+        for(int i=0;i<userList.size();i++)
+        {
+            row[0]=userList.get(i).getlimit();
+            row[1]=userList.get(i).getename();
+            row[2]=userList.get(i).geteamnt();
+            row[3]=userList.get(i).getiname();
+            row[4]=userList.get(i).getiamnt();
+            model.addRow(row);
+        }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+
+
+TO GET DATE FROM DATE CHOOSER:
+((JTextField)jDateChooser2.getDateEditor().getUiComponent()).getText();
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+User Requirements
+
+1)Authentication window(Login,signup,forgot password) for safety purpose.
+2)A text field where the daily  maximum limit of expenditure can be entered.
+3)An entry table to enter his source of income and also the amount he received.
+3)An entry table in which the name of the entity as well as the amount spended on it could be entered.
+4)Then a Save button to save his entries in his database.
+5)Checking for maximum limit-If the total of his entered expenditure exceeds his mentioned limit
+			  then an alarm buzzes as soon as he tries to save his entries.
+6) A button for getting daily estimates and also entries  should be displayed if user clicks on this button
+and the pattern for displaying should be tablular form with date,day,and limit of spending mentioned 
+at top .
+7) By default daily expenditure's calculation should be done by 12:00A.M. ,and monthly
+table should be updated with this calculation at 12:00A.M. 
+8)A button for displaying monthly estimates containing each days total ,and displaying these values 
+on clicking this button and also providing the total of till date mentioned values in this section.
+9)Also a button to display yearly basis calculation which contains total of each month as soon as 
+month ends and ending of month is determined through system calender and also total of all entered
+months is displayed at the end.  
